@@ -20,7 +20,7 @@ import java.util.Date;
  * El objecto <code>DolarTodayDeserializer</code> parsea los miembros
  * del Json a objetos java.
  * 
- * @author Luis Fernando Ortiz Vera | @lfernandortiz
+ * @author 
  */
 public class DolarTodayJson {
  

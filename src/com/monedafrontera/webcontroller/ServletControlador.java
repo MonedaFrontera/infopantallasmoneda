@@ -57,13 +57,17 @@ public class ServletControlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+        	
         	//1. procesa los parametros de la peticion
             String param = request.getParameter("accion");
             long t1 = System.currentTimeMillis();
             String agent = null;
             
+          
+            
             if ("actualizar".equals(param)) {            	
             	agent = request.getHeader("User-Agent");            	
+            	
             	
             	//System.out.println(agent);
             	
@@ -135,7 +139,7 @@ public class ServletControlador extends HttpServlet {
             //Dolartoday temp = daoD.getDolarTodayDiaAnterior();
 
             Dolartoday dolarTodayAnterior = daoD.getDolarTodayDiaAnteriorHabil();
-
+            System.out.println(dolarTodayAnterior.getEpoch());
             //se crean las colecciones de tasas anteriores para comparar
             Map<String, Float> mapaDolarAnterior = new HashMap<String, Float>();
             Map<String, Float> mapaEuroAnterior = new HashMap<String, Float>();
@@ -216,6 +220,7 @@ public class ServletControlador extends HttpServlet {
             request.setAttribute("bsfAnteriorDepo", bsAnteriorDepo);
             request.setAttribute("bsfAnteriorTrans", bsAnteriorTrasfer);
             request.setAttribute("bsfAnteriorElec", bsAnteriorElect);
+            
             
             //redireccionamos al home si el request es desde un browser, si el request 
             //es desde una consola debemos desplegar un json.
@@ -434,7 +439,7 @@ public class ServletControlador extends HttpServlet {
     }
 
     protected void sendResponseToConsole( HttpServletRequest request, HttpServletResponse response){
-    	response.setContentType("text;charset=UTF-8");
+    	response.setContentType("text;charset=UTF-8");//MIME
         PrintWriter out;
         System.out.println("\tServidor Moneda Frontera: Response 200");
 		try {

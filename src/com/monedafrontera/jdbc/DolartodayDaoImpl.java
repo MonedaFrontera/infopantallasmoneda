@@ -651,6 +651,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 		
 		Dolartoday ret[] = new Dolartoday[ resultList.size() ];
 		resultList.toArray( ret );
+		
 		return ret;
 	}
 
@@ -793,7 +794,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
 			final String SQL = sql;
 		
 			//permite ver la consulta generada
-//			System.out.println( "Executing " + SQL );
+			//System.out.println( "Executing " + SQL );
 		
 			// prepare statement
 			stmt = conn.prepareStatement( SQL );
@@ -965,10 +966,11 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
                              "FROM dolartoday GROUP BY dolartoday.epoch "+
                              ")maxepoch ON ( maxepoch.epoch = dolartoday.epoch) "+
                              "WHERE to_timestamp( maxepoch.epoch/1000)::date < CURRENT_DATE   AND " +
-                             "extract(hour from to_timestamp( maxepoch.epoch/1000) ) = 16  AND " +
+                             "extract(hour from to_timestamp( maxepoch.epoch/1000) ) <= 16  AND " +
                              "extract(minute from to_timestamp( maxepoch.epoch/1000) ) < 45 )";
                              //CURRENT_DATE
  		try {
+ 			System.out.println(sql);
 			temp = findByDynamicSelect(sql,  new Integer[]{2} )[0];
                         
 		} catch (DolartodayDaoException e) {
