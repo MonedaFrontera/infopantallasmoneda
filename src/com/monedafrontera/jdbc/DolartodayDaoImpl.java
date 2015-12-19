@@ -970,7 +970,7 @@ calls to this DAO, otherwise a new Connection will be allocated for each operati
                              "extract(minute from to_timestamp( maxepoch.epoch/1000) ) < 45 )";
                              //CURRENT_DATE
  		try {
- 			System.out.println(sql);
+ 			
 			temp = findByDynamicSelect(sql,  new Integer[]{2} )[0];
                         
 		} catch (DolartodayDaoException e) {

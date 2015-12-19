@@ -139,7 +139,6 @@ public class ServletControlador extends HttpServlet {
             //Dolartoday temp = daoD.getDolarTodayDiaAnterior();
 
             Dolartoday dolarTodayAnterior = daoD.getDolarTodayDiaAnteriorHabil();
-            System.out.println(dolarTodayAnterior.getEpoch());
             //se crean las colecciones de tasas anteriores para comparar
             Map<String, Float> mapaDolarAnterior = new HashMap<String, Float>();
             Map<String, Float> mapaEuroAnterior = new HashMap<String, Float>();
