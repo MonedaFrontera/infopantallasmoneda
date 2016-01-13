@@ -1,22 +1,41 @@
+
 <%
-    response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
-    response.setHeader("Pragma", "no-cache"); //HTTP 1.0
-    response.setDateHeader("Expires", 0); //impide el almacenamiento en caché en el servidor proxy
-    response.setHeader("Cache-Control", "no-store");
+	response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
+	response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+	response.setDateHeader("Expires", 0); //impide el almacenamiento en caché en el servidor proxy
+	response.setHeader("Cache-Control", "no-store");
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Formulario Procesado</title>
+<meta http-equiv="refresh" content="300" />
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="shortcut icon" href="img/favicon_.ico"/>
-        <meta http-equiv="refresh" content="60; url =${pageContext.request.contextPath}/ServletControlador?accion=actualizar"/>
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <c:import  url = "http://www.banrep.gov.co/es/node/32806"  />
-    </body>
+<script>
+	$(document).ready(function() {
+		var url = 'http://www.google.com';
+		$.get(url, function(response) {
+			$('div#external').html(response);
+		});
+	});
+</script>
+
+</head>
+<body>
+	
+	<div>
+		<object type="text/html"
+			data="http://dolar.wilkinsonpc.com.co/#chart1" width="1000px"
+			height="900px" style="overflow: auto; border: 1px gray">
+		</object>
+	</div>
+
+
+</body>
 </html>
