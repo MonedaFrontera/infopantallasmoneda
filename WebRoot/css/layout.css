@@ -307,7 +307,7 @@ body {
 	/*top right botton left*/
 	padding: 30px 0px 0px 20px;
 	color: #ffffff;
-	font: bold 70px Verdana;
+	font: bold 55px Verdana;
 	text-shadow: 0.06em 0.06em 0.01em #000000;
 	background-image: url(../img/vertical_line.gif);
 	background-position: 99% 4px;
@@ -344,7 +344,13 @@ body {
 	padding: 15px 0px 0px 40px;
 
 	/*este borde lo uso para controlar el layout*/
-	/*border: solid 1px #ff0000;*/
+	/* border: solid 1px #ff0000; */
+}
+
+
+#dolarSymbol img{
+	width:59.5px;
+	height:"63px";
 }
 
 #footerleft {

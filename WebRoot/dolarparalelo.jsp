@@ -33,13 +33,13 @@
                 <c:if test="${dolarAc != null }">
                     <c:choose>
                         <c:when test="${dolarAc == dolarAn }">
-                            <img id="central" src="img/rate_igual_grande.png"  width="66px" height="70px"/>
+                            <img id="central" src="img/rate_igual_grande.png"  />
                         </c:when>
                         <c:when test="${dolarAc > dolarAn }">
-                            <img id="central" src="img/rate_sube_grande_a.png" width="66px" height="70px"/>
+                            <img id="central" src="img/rate_sube_grande_a.png" />
                         </c:when>
                         <c:when test="${dolarAc < dolarAn }">
-                            <img id="central" src="img/rate_baja_grande_a.png"  width="66px" height="70px"/>
+                            <img id="central" src="img/rate_baja_grande_a.png"  />
                         </c:when>
                     </c:choose>
                 </c:if>
