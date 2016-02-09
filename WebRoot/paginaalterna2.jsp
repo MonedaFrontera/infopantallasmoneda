@@ -30,8 +30,8 @@
 <body>
 	
 	<div>
-		<object type="text/html"
-			data="http://dolar.wilkinsonpc.com.co/#chart1" width="1000px"
+		<object type="text/html" 
+			data="http://dolar.wilkinsonpc.com.co/divisas/dolar.html#indicador_vigente" width="1000px"
 			height="900px" style="overflow: auto; border: 1px gray">
 		</object>
 	</div>
