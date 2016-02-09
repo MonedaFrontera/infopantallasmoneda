@@ -342,11 +342,9 @@ body {
 	text-shadow: 0.06em 0.06em 0.01em #000000;
 	/*top right botton left*/
 	padding: 15px 0px 0px 40px;
-
 	/*este borde lo uso para controlar el layout*/
 	/* border: solid 1px #ff0000; */
 }
-
 
 #dolarSymbol img{
 	width:59.5px;
